@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "pip" # Python bağımlılıklarını kontrol etmek için
+    directory: "/"           # Ana dizini belirtiyoruz, bu sizin proje yapınıza göre değişebilir
+    schedule:
+      interval: "weekly"     # Güncelleme sıklığı: daily, weekly, veya monthly olabilir
+    ignore:
+      - dependency-name: "starlette" # Örneğin belirli bir bağımlılığı göz ardı edebilirsiniz
+        versions: ["<1.0.0"]        # Belirli bir sürümden daha eski sürümleri göz ardı edebilirsiniz
